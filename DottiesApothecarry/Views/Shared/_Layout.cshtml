@@ -3,41 +3,56 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DottiesApothecarry</title>
+    <title>@ViewData["Title"] - Dottie's</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/custombutton.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DottiesApothecarry</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <div class="topnav">
+            @* <h1 class="header__title">Welcome to Dotties Apothecarry</h1> *@
+            <nav class="header__nav">
+                @* This image is clickable and will act as the home button. *@
+                 <input type="image" href="#home" src="img\Dotties Apothecarry-logos_transparent.png" name="button-logo" class="button-home-submit" id="saveForm" />
+                <div class="nav_bar">
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#login">Login/Account</a>
+                    <a href="#shopping-cart">My Cart</a>
+                    <span class="search-bar"><input type="text" placeholder="Search.."></span>
                 </div>
-            </div>
-        </nav>
+                    </div>
+                    @* <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <input type="text" placeholder="Search..">
+                <div class="home-buttons">
+                    <span><button class="button-33" role="button">Button 1</button></span>
+                    <span><button class="button-33" role="button">Button 1</button></span>
+                    <span><button class="button-33" role="button">Button 3</button></span>
+                </div> *@
+            
+                @* <button class="button-49" role="button">@Html.ActionLink("Factory", "Index", "Home")</button>
+                <button class="button-49" role="button">@Html.ActionLink("Engineers", "Index", "Engineers")</button>
+                <button class="button-49" role="button">@Html.ActionLink("Machines", "Index", "Machines")</button> *@
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div>
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - DottiesApothecarry - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - Dotties Apothecarry - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
