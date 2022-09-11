@@ -63,6 +63,7 @@ body {
   margin-bottom: 60px;
 }
 .footer {
+  background-color: rgb(154,189,142);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -93,6 +94,7 @@ body {
   justify-content: left;
   align-items: left;
   max-width: 20%;
+  margin-top: -100px;
   height: auto;
 }
 
@@ -111,6 +113,22 @@ body {
 
 span + span {
   margin-left: 30px;
+}
+
+.nav_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -150px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: right;
+  margin-left: 20%;
 }
 
 /* Add a black background color to the top navigation bar */
@@ -133,8 +151,8 @@ span + span {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color :rgb(63,126,42);
+  color: rgb(244,167,159);
 }
 
 /* Style the "active" element to highlight the current page */
