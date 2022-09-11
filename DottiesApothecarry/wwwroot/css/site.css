@@ -63,7 +63,7 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  background-color: rgb(154,189,142);
+  background-color: rgb(24,39,30);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -72,7 +72,7 @@ body {
 }
 
 .home {
-  background-image: url('../img/background-image.jpg');
+  background-image: url('../img/dotties_background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -83,9 +83,10 @@ body {
   height: calc(100vh - 152px);
   width: 100vw;
   color: white;
-  /* font-family: '', cursive; */
+  font-family: 'Montserrat', sans-serif;
+  font-size:x-large;
   text-align: center;
-  filter: brightness(70%);
+  /* filter: brightness(70%); */
 }
 
 .button-home-submit {
@@ -134,14 +135,14 @@ span + span {
 /* Add a black background color to the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #9abd8e;
+  background-color: rgb(24,39,30);
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   display: block;
-  color: black;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -153,6 +154,7 @@ span + span {
 .topnav a:hover {
   background-color :rgb(63,126,42);
   color: rgb(244,167,159);
+  border-radius: 8px;
 }
 
 /* Style the "active" element to highlight the current page */
@@ -169,6 +171,7 @@ span + span {
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
+  border-radius: 8px;
 }
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
