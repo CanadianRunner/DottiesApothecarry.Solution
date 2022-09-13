@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using DottiesApothecarry.Models;
+using DottiesApothecary.Models;
 
-namespace DottiesApothecarry.Controllers
+namespace DottiesApothecary.Controllers
 {
     public class HomeController : Controller
     {
