@@ -1,6 +1,6 @@
 using System;
 
-namespace DottiesApothecarry.Models
+namespace DottiesApothecary.Models
 {
     public class ErrorViewModel
     {
