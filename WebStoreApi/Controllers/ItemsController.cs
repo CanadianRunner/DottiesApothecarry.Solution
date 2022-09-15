@@ -22,9 +22,34 @@ namespace WebStoreApi.Controllers
 
         // GET: api/Items
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Item>>> GetItems()
+        public async Task<ActionResult<IEnumerable<Item>>> GetItem(string name, int minPrice, int maxPrice, bool isInStock)
         {
-            return await _context.Items.ToListAsync();
+            var query = _context.Items.AsQueryable();
+
+            if (name != null)
+            {
+                query = query.Where(entry => entry.Name == name);
+            }
+
+            if (minPrice > 0)
+            {
+                query = query.Where(entry => entry.Price >= minPrice);
+            }
+
+            if (maxPrice > 0)
+            {
+                query = query.Where(entry => entry.Price <= maxPrice);
+            }
+
+            if (isInStock == true)
+            {
+                query = query.Where(entry => entry.InStockQty >= 1);
+            } else if (isInStock == false)
+            {
+                query = query.Where(entry => entry.InStockQty == 0);
+            }
+
+            return await query.ToListAsync();
         }
 
         // GET: api/Items/5
