@@ -7,11 +7,6 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -62,6 +57,8 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+/* Custom styles */
 .footer {
   background-color: rgb(24,39,30);
   position: absolute;
@@ -70,6 +67,42 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.nav__logo-button {
+    height: 100px;
+    width: auto;
+}
+.nav__layout {
+    background-color: rgb(1, 35, 1);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(min-width: 1280px ) {
+    .nav__layout {
+        padding: 20px;
+    }
+}
+
+.nav__links {
+    display: flex;
+    gap: 60px;
+}
+
+.nav__user-logo {
+    height: 50px;
+    width: auto;
+}
+
+
+.nav__flex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 
 .home {
   background-image: url('../img/dotties_background.png');
@@ -80,16 +113,100 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 152px);
-  width: 100vw;
+  height: calc(100vh - 300px);
   color: white;
+  font-weight: 800;
   font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size:x-large;
-  text-align: center;
-  /* filter: brightness(70%); */
+  text-align: center; 
 }
 
-.button-home-submit {
+.padding-20 {
+  padding: 20px !important; 
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.arrow{
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+.card-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card:hover .card-img {
+  opacity: 0.3;
+}
+
+.card:hover .middle {
+  opacity: 1;
+}
+
+.img-text {
+  background-color: rgb(34,56,43);
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.card {
+  color: white;
+}
+
+/* .button-home-submit {
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -97,9 +214,9 @@ body {
   max-width: 20%;
   margin-top: -100px;
   height: auto;
-}
+} */
 
-.home-buttons {
+/* .home-buttons {
   display: flex;
   flex-direction: row;
   justify-content: right;
@@ -130,16 +247,16 @@ span + span {
   justify-content: right;
   align-items: right;
   margin-left: 20%;
-}
+} */
 
 /* Add a black background color to the top navigation bar */
-.topnav {
+/* .topnav {
   overflow: hidden;
   background-color: rgb(24,39,30);
-}
+} */
 
 /* Style the links inside the navigation bar */
-.topnav a {
+/* .topnav a {
   float: left;
   display: block;
   color: white;
@@ -148,23 +265,23 @@ span + span {
   text-decoration: none;
   font-size: 17px;
   margin-left: 20px;
-}
+} */
 
 /* Change the color of links on hover */
-.topnav a:hover {
+/* .topnav a:hover {
   background-color :rgb(63,126,42);
   color: rgb(244,167,159);
   border-radius: 8px;
-}
+} */
 
 /* Style the "active" element to highlight the current page */
-.topnav a.active {
+/* .topnav a.active {
   background-color: #2196F3;
   color: white;
-}
+} */
 
 /* Style the search box inside the navigation bar */
-.topnav input[type=text] {
+/* .topnav input[type=text] {
   float: right;
   padding: 6px;
   border: none;
@@ -172,10 +289,10 @@ span + span {
   margin-right: 16px;
   font-size: 17px;
   border-radius: 8px;
-}
+} */
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .topnav a, .topnav input[type=text] {
     float: none;
     display: block;
@@ -187,4 +304,4 @@ span + span {
   .topnav input[type=text] {
     border: 1px solid #ccc;
   }
-}
+} */
