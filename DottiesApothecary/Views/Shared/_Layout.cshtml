@@ -24,10 +24,12 @@
                     <input type="image" href="#home" src="img\logo.png" name="button-logo" class="nav__logo-button" id="saveForm" />
                 </div>
                 <div class="nav__links">
-                    <a class="nav__button button-33" href="#about">About</a>
-                    <a class="nav__button button-33" href="#contact">Contact</a>
-                    <a class="nav__button button-33" href="#sale">Sale</a>
-                    <a class="nav__button button-33" href="#shopping-cart">My Cart</a>
+                    @* <a asp-area="Sale" name="nav__button button-33" asp-controller="Home" asp-action="Sale">Sale</a> *@
+                    
+                    @Html.ActionLink("About", "Index", "About", null, new {@class = "nav__button button-33"})</button> 
+                    @Html.ActionLink("Contact", "Index", "Contact", null, new {@class = "nav__button button-33"})</button> 
+                    @Html.ActionLink("Sale", "Index", "Sale", null, new {@class = "nav__button button-33"})</button> 
+                    @Html.ActionLink("My Cart", "Index", "#shopping-cart", null, new {@class = "nav__button button-33"})</button> 
                 </div>
                 <div class="nav__search">
                     <span class="nav__flex">
@@ -36,9 +38,11 @@
                             <img class="nav__user-logo" src="img\user1.png" />
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item">Settings</a>
                             <a class="dropdown-item">Profile</a>
                             <a class="dropdown-item">My Orders</a>
+                            <a class="dropdown-item">Rewards</a>
+                            <a class="dropdown-item">Live Chat</a>
+                            <a class="dropdown-item">Settings</a>
                         </div>
                     </span>
                 </div>

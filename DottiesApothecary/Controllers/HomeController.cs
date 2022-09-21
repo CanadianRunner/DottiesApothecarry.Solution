@@ -23,6 +23,26 @@ namespace DottiesApothecary.Controllers
             return View();
         }
 
+         public IActionResult About()
+        {
+            return View();
+        }
+
+         public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult Sale()
+        {
+            return View();
+        }
+
+         public IActionResult ShoppingCart()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
